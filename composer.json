@@ -1,0 +1,12 @@
+{
+    "name": "tory495/php-algorithm",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Tory495\\PhpAlgorithm\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.3.0"
+    }
+}
