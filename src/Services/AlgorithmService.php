@@ -10,18 +10,23 @@ use DateTime;
 
 class AlgorithmService
 {
-	private const TUESDAY_INDEX = 1;
+    private const TUESDAY_INDEX = 2;
 
-	public function tuesdayCount(DateTime $startDate, DateTime $endDate): int
-	{
-		$count = 0;
+    public function tuesdayCount(DateTime $startDate, DateTime $endDate): int
+    {
+        date_default_timezone_set('Europe/Moscow');
+        $count = 0;
 
-		while ($count === 0 && $startDate <= $endDate) {
-			echo $startDate->format('N') . PHP_EOL;
+        while ($startDate <= $endDate) {
+            if ($startDate->format('N') == self::TUESDAY_INDEX) {
+                $interval = $startDate->diff($endDate);
+                $count = intdiv($interval->days, 7) + 1;
+                break;
+            }
 
-			$startDate->modify('+1 day');
-		}
+            $startDate->modify('+1 day');
+        }
 
-		return 1;
-	}
+        return $count;
+    }
 }

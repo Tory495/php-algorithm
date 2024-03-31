@@ -12,6 +12,6 @@ class App
 	public function run(): void
 	{
 		$algorithmService = new AlgorithmService();
-		$algorithmService->tuesdayCount(new DateTime('01-01-2024'), new DateTime('25-01-2024'));
+		echo $algorithmService->tuesdayCount(new DateTime('01-03-2024'), new DateTime('08-04-2024')) . PHP_EOL;
 	}
 }
