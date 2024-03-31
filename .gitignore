@@ -1,1 +1,5 @@
 /vendor/
+/.vscode/
+/.idea/
+.env
+/postgres-data/
