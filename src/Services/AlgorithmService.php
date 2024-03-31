@@ -6,8 +6,6 @@ namespace Tory495\PhpAlgorithm\Services;
 
 use DateTime;
 
-// Реализовать на PHP расчет количества вторников между двумя датами на PHP. Алгоритм должен быть наиболее оптимальный
-
 class AlgorithmService
 {
     private const TUESDAY_INDEX = 2;
